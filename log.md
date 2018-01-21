@@ -11,8 +11,10 @@ This repo is a test with Parcel, some basic js/css and the Firebase sdk.
 * [x] Add a `LICENSE.md` file
 * [x] Add a `README.md` file.
 * [ ] Use Firebase sdk.
-* [ ] Create a simple login form.
+* [ ] Set up Firebase hosting.
+* [ ] Create a simple login form with Firebase.
 * [ ] Hide content from who isn't logged in.
+* [ ] Create a npm script for deploying to Firebase.
 
 ### Getting Start tutorial
 
@@ -63,3 +65,49 @@ Move files to `src` folders, change scripts:
 
 Create folder `style` and put `skeleton.css` there and `normalize.css`.
 Import from `index.html`
+
+## Using Firebase SDK
+
+Firebase SDK is the official js library for using Firebase in your application.
+To start, I created a project on Firebase called `parcel-firebase`.
+
+### Set up Firebase for hosting
+
+Firebase requires `firebase-tools` cli
+
+```sh
+npm install -g firebase-tools@latest
+firebase login
+firebase init # set dist/ as public directory
+```
+
+To deploy just use `firebase deploy` command, later there will be a npm script just for it.
+
+### Installing and using the Firebase SDK
+
+```sh
+npm install --save-dev firebase
+```
+
+### Using scss
+
+You just need to install `node-sass`, and then link it to your js file:
+
+```sh
+npm install --save-dev node-sass
+```
+
+index.js:
+
+```js
+import "./style/main.scss";
+```
+
+Now imports work just fine inside scss files:
+
+main.scss:
+
+```sass
+@import "normalize.scss";
+@import "skeleton.scss";
+```
