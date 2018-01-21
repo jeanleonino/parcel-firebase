@@ -61,11 +61,31 @@ Move files to `src` folders, change scripts:
   },
 ```
 
-### Using css
+## Using SASS
 
-Create folder `style` and put `skeleton.css` there and `normalize.css`.
-Import from `index.html`
+I had some issues getting sass to work, but [@brandon93s](http://github.com/brandon93s) helped me:
+You just need to install `node-sass`, and then link it to your js file:
 
+```sh
+npm install --save-dev node-sass
+```
+
+index.js:
+
+```js
+import "./style/main.scss";
+```
+
+Now imports work just fine inside scss files:
+
+main.scss:
+
+```sass
+@import "normalize.scss";
+@import "skeleton.scss";
+```
+
+PS: thanks, @brandon93s!
 ## Using Firebase SDK
 
 Firebase SDK is the official js library for using Firebase in your application.
@@ -87,27 +107,4 @@ To deploy just use `firebase deploy` command, later there will be a npm script j
 
 ```sh
 npm install --save-dev firebase
-```
-
-### Using scss
-
-You just need to install `node-sass`, and then link it to your js file:
-
-```sh
-npm install --save-dev node-sass
-```
-
-index.js:
-
-```js
-import "./style/main.scss";
-```
-
-Now imports work just fine inside scss files:
-
-main.scss:
-
-```sass
-@import "normalize.scss";
-@import "skeleton.scss";
 ```
