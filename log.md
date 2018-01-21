@@ -32,10 +32,27 @@ Created `index.html` and `index.js`, just following [Getting Started](https://en
 
 Tutorial finished, next steps:
 
-1. Change all to `src/` folder, looks like `dist/` is created automatically.
-1. Use `sass`.
-1. Use Firebase sdk.
-1. Create a simple login form.
-1. Hide content from who isn't logged in.
+* [x] Change all to `src/` folder, looks like `dist/` is created automatically.
+* [ ] Use `sass`. (! problem)
+* [x] Use basic css, could be Skeleton.css
+* [ ] Use Firebase sdk.
+* [ ] Create a simple login form.
+* [ ] Hide content from who isn't logged in.
 
-Firstly, commit all work to here: `git commit -m "Up and running parcel"
+Firstly, commit all work to here: `git commit -m "Up and running parcel"`
+
+Move files to `src` folders, change scripts:
+
+```json
+"scripts": {
+    "watch": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+```
+
+Using css
+
+Create folder `style` and put `skeleton.css` there and `normalize.css`.
+Import from `index.html`
+
+
