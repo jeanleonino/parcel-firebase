@@ -1,4 +1,3 @@
-import "./style/main.scss";
-import firebase from "./firebase";
+import './style/main.scss';
 
 console.log("index");

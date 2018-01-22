@@ -1,20 +1,22 @@
 # Using Parcel for the first time
 
 This repo is a test with Parcel, some basic js/css and the Firebase sdk.
+
 ## Checklist
 
 * [x] Get parcel up and running
 * [x] Create `npm scripts`
 * [x] Change all to `src/` folder, looks like `dist/` is created automatically.
-* [ ] Use `sass`. (! problem)
+* [x] Use `sass`. (! problem)
 * [x] Use basic css, could be Skeleton.css
 * [x] Add a `LICENSE.md` file
 * [x] Add a `README.md` file.
+* [x] Set up Firebase hosting.
 * [ ] Use Firebase sdk.
-* [ ] Set up Firebase hosting.
 * [ ] Create a simple login form with Firebase.
 * [ ] Hide content from who isn't logged in.
 * [ ] Create a npm script for deploying to Firebase.
+* [ ] Use a manifest.json
 
 ### Getting Start tutorial
 
@@ -30,7 +32,7 @@ git init
 
 Created file `.gitignore`
 
-```
+```sh
 node_modules/
 node_modules/
 .cache/
@@ -85,7 +87,8 @@ main.scss:
 @import "skeleton.scss";
 ```
 
-PS: thanks, @brandon93s!
+PS: thanks, [@brandon93s]((http://github.com/brandon93s))!
+
 ## Using Firebase SDK
 
 Firebase SDK is the official js library for using Firebase in your application.
